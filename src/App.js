@@ -4,7 +4,7 @@ import './App.css';
 import BotCollection from './BotCollection';
 import YourBotArmy from './ YourBotArmy';
 import { useEffect, useState } from "react";
-import { GetBots,GetArmy } from "./utilities";
+import { GetBots } from "./utilities";
 
 function App() {
 
@@ -18,17 +18,28 @@ function App() {
       });
   }, []);
 
-  useEffect(() => {
-    GetArmy().then(data => {
-        setArmy(data);
-    });
-}, []);
+// useEffect(() => {
+//   fetch("http://localhost:3000/army",{
+//     method: "POST",
+//         headers: {
+//             "Content-Type": "application/json"
+//         },
+//         body: JSON.stringify()
+//     }).then((response)=>  response.json())
+//     .then((data)=> {
+//         alert(`transaction with id: ${data.id} added successfully!`)
+//     })
+// },[]);
 
+ function updateBots(botObj){
+  // console.log(botObj);
+  setArmy(botObj);
+ }
 
   return (
  <>
- <YourBotArmy army={army}/>
-<BotCollection bots={bots} />
+ <YourBotArmy army={army} />
+<BotCollection bots={bots} updateBots={updateBots}/>
   
  </>
   )
