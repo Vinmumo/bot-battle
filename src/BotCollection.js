@@ -1,6 +1,6 @@
-
+import { NavLink } from "react-router-dom"
 import "./botcollection.css";
-// import { addBot } from "./utilities";
+
 
 function BotCollection({bots, updateBots}) {
 
@@ -21,7 +21,9 @@ function BotCollection({bots, updateBots}) {
             <div className="card-body">
                 <h5 className="card-title">{bot.name}</h5>
                 <p className="card-text">{bot.catchphrase}</p>
-                <button className="btn btn-primary">Go somewhere</button>
+                <NavLink className="btn btn-primary btn-sm mx-2" to={`/botData`}>
+                        View
+                    </NavLink>
             </div>
         </div>
     ));
