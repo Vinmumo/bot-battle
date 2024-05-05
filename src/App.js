@@ -18,24 +18,36 @@ function App() {
       });
   }, []);
 
-// useEffect(() => {
-//   fetch("http://localhost:3000/army",{
-//     method: "POST",
-//         headers: {
-//             "Content-Type": "application/json"
-//         },
-//         body: JSON.stringify()
-//     }).then((response)=>  response.json())
-//     .then((data)=> {
-//         alert(`transaction with id: ${data.id} added successfully!`)
-//     })
-// },[]);
 
- function updateBots(botObj){
-  // console.log(botObj);
-  setArmy(botObj);
- }
+ 
 
+  function updateBots(bot) {
+    // POST request to add the new bot to the army endpoint
+    fetch("http://localhost:3000/army", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(bot)
+    })
+    .then(response => response.json())
+    .then(() => {
+      // Fetch the updated army data after adding the new bot
+      fetch("http://localhost:3000/army")
+        .then(response => response.json())
+        .then(data => {
+          console.log("Bot added successfully!");
+          // Update the army state with the fetched data
+          setArmy(data);
+        })
+        .catch(error => {
+          console.error("Error fetching updated army:", error);
+        });
+    })
+    .catch(error => {
+      console.error("Error adding bot:", error);
+    });
+  }
   return (
  <>
  <YourBotArmy army={army} />
