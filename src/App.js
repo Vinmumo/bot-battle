@@ -63,7 +63,7 @@ function App() {
   // }
   return (
  <>
- <YourBotArmy army={army} />
+ <YourBotArmy army={army} setArmy={setArmy}/>
 <BotCollection bots={bots} />
   {/* <BotData  updateBots={updateBots}/> */}
  </>
