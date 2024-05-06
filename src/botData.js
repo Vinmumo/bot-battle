@@ -51,6 +51,7 @@ const navigate = useNavigate();
         <h5 className="card-title">{bot.name}</h5>
         <p className="card-text">Bot Class:{bot.bot_class}</p>
         <p className="card-text">Health:{bot.health}</p>
+        <p className="card-text">Catchphrase:{bot.catchphrase}</p>
         <p className="card-text">Damage:{bot.damage}</p>
         <p className="card-text">Health:{bot.health}</p>
       </div>
