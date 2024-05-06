@@ -7,7 +7,7 @@ function YourBotArmy({ army, setArmy }) {
   }
 
   function handleRemove(id) {
-    fetch(`http://localhost:3000/army/${id}`, {
+    fetch(`https://json-fz88.onrender.com/army/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
