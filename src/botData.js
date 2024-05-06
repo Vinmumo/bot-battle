@@ -37,7 +37,7 @@ const navigate = useNavigate();
   },[params.id])
 
   function goBack(){
-      navigate("/")
+      navigate("/bot-battle")
   }
     return (
         <>
