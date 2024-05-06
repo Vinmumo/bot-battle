@@ -22,7 +22,7 @@ function App() {
  
 
   function updateBots(bot) {
-    // POST request to add the new bot to the army endpoint
+    // POST request to add the new bot to army endpoint
     fetch("http://localhost:3000/army", {
       method: "POST",
       headers: {

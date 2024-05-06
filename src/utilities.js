@@ -22,3 +22,11 @@ export function GetArmy() {
      .then(res => res.json())
  }
  
+ export function getBotsById(id){
+    return fetch(`http://localhost:3000/bots/${id}`,{
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json"
+    }
+    }).then(response => response.json())
+}

@@ -9,7 +9,7 @@ function BotCollection({bots, updateBots}) {
     function handleClick(bot) {
         // console.log(bot);
         // addBot(bot);
-      updateBots(bot);
+    //   updateBots(bot);
         
     }
 
@@ -21,7 +21,7 @@ function BotCollection({bots, updateBots}) {
             <div className="card-body">
                 <h5 className="card-title">{bot.name}</h5>
                 <p className="card-text">{bot.catchphrase}</p>
-                <NavLink className="btn btn-primary btn-sm mx-2" to={`/botData`}>
+                <NavLink className="btn btn-primary btn-sm mx-2" to={`/botData/${bot.id}`}>
                         View
                     </NavLink>
             </div>
