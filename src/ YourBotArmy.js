@@ -25,7 +25,7 @@ const newArmy = army.map(arm=> {
             <div className="card-body">
                 <h5 className="card-title">{arm.name}</h5>
                 <p className="card-text">{arm.catchphrase}</p>
-                <button className="btn btn-primary" href>Go somewhere</button>
+                <button className="btn btn-primary" >Remove</button>
             </div>
         </div>
 })

@@ -30,3 +30,4 @@ export function GetArmy() {
     }
     }).then(response => response.json())
 }
+

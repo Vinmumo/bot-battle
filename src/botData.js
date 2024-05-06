@@ -4,6 +4,24 @@ import { useState, useEffect } from "react";
 
 
 function BotData(){
+
+
+    function handleClick(bot) {
+        fetch("http://localhost:3000/army", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify(bot)
+          })
+          .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            navigate("/")
+        })
+    }
+
+
     const params = useParams();
 // console.log(params)
 const [bot, setBots] = useState({})
@@ -37,7 +55,7 @@ const navigate = useNavigate();
         <p className="card-text">Health:{bot.health}</p>
       </div>
     </div>
-    <button className="btn btn-primary btn-sm m-3">Enlist</button>
+    <button className="btn btn-primary btn-sm m-3" onClick={() => handleClick(bot)}>Enlist</button>
      <button onClick={goBack} className="btn btn-warning btn-sm m-3">Go Back</button>
   </div>
 </div>
