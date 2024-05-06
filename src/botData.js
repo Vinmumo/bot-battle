@@ -17,7 +17,7 @@ function BotData(){
           .then(response => response.json())
         .then(data => {
             console.log(data);
-            navigate("/")
+            navigate("/bot-battle")
         })
     }
 
