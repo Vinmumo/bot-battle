@@ -21,7 +21,7 @@ function App() {
 
 
   useEffect(() => {
-    fetch("http://localhost:3000/army",{
+    fetch("https://json-fz88.onrender.com/army",{
       method: "GET",
       headers: {
         "Content-Type": "application/json",

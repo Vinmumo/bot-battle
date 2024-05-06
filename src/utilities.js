@@ -1,5 +1,5 @@
 export function GetBots() {
-   return fetch("http://localhost:3000/bots",{
+   return fetch("https://json-fz88.onrender.com/bots",{
         method: "GET",
         headers: {
             "Content-Type": "application/json",
@@ -11,7 +11,7 @@ export function GetBots() {
 }
 
 export function GetArmy() {
-    return fetch("http://localhost:3000/army",{
+    return fetch("https://json-fz88.onrender.com/army",{
          method: "GET",
          headers: {
              "Content-Type": "application/json",
@@ -23,7 +23,7 @@ export function GetArmy() {
  }
  
  export function getBotsById(id){
-    return fetch(`http://localhost:3000/bots/${id}`,{
+    return fetch(`https://json-fz88.onrender.com/bots/${id}`,{
     method: "GET",
     headers: {
       "Content-Type": "application/json"
