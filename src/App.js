@@ -2,7 +2,7 @@
 // import { useEffect } from 'react';
 import './App.css';
 import BotCollection from './BotCollection';
-import YourBotArmy from './ YourBotArmy';
+import YourBotArmy from './YourBotArmy';
 import { useEffect, useState } from "react";
 import { GetBots } from "./utilities";
 // import BotData from './botData';

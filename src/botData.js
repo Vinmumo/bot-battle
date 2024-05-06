@@ -17,7 +17,7 @@ function BotData(){
           .then(response => response.json())
         .then(data => {
             console.log(data);
-            navigate("/")
+            navigate("/bot-battle")
         })
     }
 
@@ -37,7 +37,7 @@ const navigate = useNavigate();
   },[params.id])
 
   function goBack(){
-      navigate("/")
+      navigate("/bot-battle")
   }
     return (
         <>

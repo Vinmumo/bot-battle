@@ -8,11 +8,11 @@ import BotData from "./botData";
 
 const routes = [
    {
-    path: '/',
+    path: '/bot-battle',
     element: <App/>,
     errorElement: <h1> An Error coccured</h1>
    },{
-        path: "/botData/:id",
+        path: "/bot-battle/botData/:id",
         element: <BotData/>
       }
     ]

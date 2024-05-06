@@ -16,7 +16,7 @@ function BotCollection({bots}) {
             <div className="card-body">
                 <h5 className="card-title">{bot.name}</h5>
                 <p className="card-text">{bot.catchphrase}</p>
-                <NavLink className="btn btn-primary btn-sm mx-2" to={`/botData/${bot.id}`}>
+                <NavLink className="btn btn-primary btn-sm mx-2" to={`/bot-battle/botData/${bot.id}`}>
                         View
                     </NavLink>
             </div>
